@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
+import 'package:laundry_app/widget/custom_button.dart';
 import 'package:laundry_app/widget/custom_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -62,18 +63,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(
                           height: 30,
                         ),
-                        TextButton(
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all<Color>(kDarkColor),
-                              fixedSize: MaterialStateProperty.all<Size?>(
-                                  const Size.fromWidth(300))),
-                          onPressed: null,
-                          child: Text(
-                            "LOG IN",
-                            style: kFieldTextDecoration.copyWith(
-                                color: Colors.white),
-                          ),
+                        CustomButton(
+                          text: "LOGIN",
+                          onpressed: () {
+                            print("login");
+                          },
+                          icon: Icons.login,
                         ),
                         const Spacer(),
                         DefaultTextStyle(
@@ -92,6 +87,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                         textScaleFactor: 0.8,
                                       )),
                                       GestureDetector(
+                                        onTap: () {
+                                          print("signup");
+                                        },
                                         child: const Text(
                                           "Signup",
                                           textScaleFactor: 0.8,
@@ -105,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 GestureDetector(
                                     onTap: () {
-                                      print("object");
+                                      print("password forgot");
                                     },
                                     child: const Text(
                                       "Forgot your password?",
