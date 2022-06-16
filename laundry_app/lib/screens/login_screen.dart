@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/widget/custom_button.dart';
-import 'package:laundry_app/widget/custom_textfield.dart';
+import 'package:laundry_app/widget/user_details_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = "login_screen";
@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: kLightBackgroundColor,
+        backgroundColor: kGreyBackgroundColor,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -41,19 +41,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Container(
                   decoration: kBottomBoxDecoration,
                   child: Padding(
-                    padding: const EdgeInsets.all(30),
+                    padding: kBottomBoxPadding,
                     child: Column(
                       children: <Widget>[
                         const SizedBox(
                           height: 10,
                         ),
-                        CustomTextField(
+                        UserDetailsTextField(
                           fieldName: "Username",
                           onChanged: (e) {
                             print(e);
                           },
                         ),
-                        CustomTextField(
+                        UserDetailsTextField(
                           fieldName: "Password",
                           obscureText: true,
                           onChanged: (e) {
