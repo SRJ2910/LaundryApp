@@ -58,8 +58,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 30,
                 ),
                 CustomButton(
+                  width: kBigButtonWidth,
+                  textColor: Colors.white,
+                  bgColor: kDarkColor,
                   text: 'Create Account',
-                  onpressed: () => null,
+                  onPressed: () => null,
                 ),
                 Spacer(),
                 DefaultTextStyle(

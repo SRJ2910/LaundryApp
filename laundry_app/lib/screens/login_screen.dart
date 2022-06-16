@@ -64,8 +64,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 30,
                         ),
                         CustomButton(
+                          width: kBigButtonWidth,
+                          textColor: Colors.white,
+                          bgColor: kDarkColor,
                           text: "LOGIN",
-                          onpressed: () {
+                          onPressed: () {
                             print("login");
                           },
                           icon: Icons.login,
